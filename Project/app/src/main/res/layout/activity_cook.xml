@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cook">
+
+    <VideoView
+        android:id="@+id/bg3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/wood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="360dp"
+        android:layout_height="103dp"
+        android:layout_margin="10dp"
+        android:padding="0dp"
+        app:columnCount="2"
+        app:layout_constraintBottom_toTopOf="@+id/addIng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title3"
+        app:layout_constraintVertical_bias="0.486"
+        app:rowCount="1">
+
+        <Button
+            android:id="@+id/removeIng"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:foreground="@drawable/fridge"
+            app:icon="@drawable/fridge"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <AutoCompleteTextView
+            android:id="@+id/ingredient"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/light_yellow"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:textColor="#000000"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/rancho"
+        android:text="Cook!"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg3"
+        app:layout_constraintVertical_bias="0.118" />
+
+    <Button
+        android:id="@+id/addIng"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="264dp"
+        android:background="@android:color/transparent"
+        android:foreground="@drawable/food"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cook"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/transparent"
+        android:foreground="@drawable/cook"
+        android:onClick="cook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addIng"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/brick_red"
+            android:textAlignment="center"
+            app:alignmentMode="alignBounds"
+            app:columnCount="5"
+            app:flow_horizontalAlign="center"
+            app:flow_verticalAlign="center"
+            app:rowCount="1">
+
+            <Button
+                android:id="@+id/menu"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:foreground="@drawable/menu"
+                android:insetLeft="10dp"
+                android:insetRight="10dp"
+                android:onClick="menu"
+                android:textAlignment="center"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/webSearch"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:background="@android:color/transparent"
+                android:foreground="@drawable/fingerprint"
+                android:insetLeft="10dp"
+                android:insetRight="10dp"
+                android:onClick="webSearch"
+                app:layout_column="1"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/dishes"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="70dp"
+                android:background="@android:color/transparent"
+                android:foreground="@drawable/dish"
+                android:insetLeft="10dp"
+                android:insetRight="10dp"
+                android:onClick="cook2"
+                app:layout_column="3"
+                app:layout_row="0" />
+        </androidx.gridlayout.widget.GridLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

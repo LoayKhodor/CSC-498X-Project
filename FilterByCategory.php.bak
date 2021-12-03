@@ -1,0 +1,15 @@
+<?php
+//if time permits
+include("connection.php");
+$dishes = $_GET['dish'];
+$query = "SELECT name from dishes WHERE category =\"".$dishes."\"";
+$stmt = $connection->prepare($query);
+$stmt->execute();
+$result = $stmt->get_result();
+$temp_array=[];
+while($row = $result->fetch_assoc()){
+$temp_array[] = $row;
+}
+$json = json_encode($temp_array);
+print $json;
+?>
