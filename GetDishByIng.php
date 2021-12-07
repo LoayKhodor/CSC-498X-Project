@@ -1,14 +1,12 @@
 <?php
 include("connection.php");
 $values = explode(",", $_GET['ing']);
-print count($values) . " values passed.<br>";
-print_r($values);
-print("<br>");
+
 $query = "SELECT DISTINCT name, D.rid FROM dishes AS D,recipe_ingredients AS R WHERE D.rid = R.rid AND R.Ringredient=\"".$values[0]."\"";
 for ($x = 1; $x < count($values); $x++) {
   $query .= " OR R.Ringredient=\"".$values[$x]."\"";
 }
-echo $query;
+
 
 $stmt = $connection->prepare($query);
 
@@ -16,7 +14,6 @@ $stmt = $connection->prepare($query);
 
 //$stmt ->bind_param(str_repeat("s",count($values)),implode(", ", &($values)));
 
-print("<br>");
 $stmt->execute();
 $result = $stmt->get_result();
 $temp_array=[];

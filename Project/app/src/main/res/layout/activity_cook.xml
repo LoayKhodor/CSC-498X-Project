@@ -19,40 +19,136 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.gridlayout.widget.GridLayout
-        android:layout_width="360dp"
-        android:layout_height="103dp"
+        android:id="@+id/allIngredients"
+        android:layout_width="358dp"
+        android:layout_height="270dp"
         android:layout_margin="10dp"
+        android:layout_marginTop="24dp"
         android:padding="0dp"
         app:columnCount="2"
-        app:layout_constraintBottom_toTopOf="@+id/addIng"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title3"
-        app:layout_constraintVertical_bias="0.486"
-        app:rowCount="1">
+        app:rowCount="6">
+
+        <AutoCompleteTextView
+            android:id="@+id/ingredient3"
+            android:layout_width="650px"
+            android:layout_height="120px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/light_yellow"
+            android:fontFamily="@font/rancho"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:tag="4"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/removeIng5"
+            android:layout_width="150px"
+            android:layout_height="120px"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="25dp"
+            android:background="@android:color/transparent"
+            android:foreground="@drawable/fridge"
+            android:onClick="clear"
+            android:tag="4"
+            app:icon="@drawable/fridge"
+            app:layout_column="1"
+            app:layout_row="3" />
+
+        <AutoCompleteTextView
+            android:id="@+id/ingredient1"
+            android:layout_width="650px"
+            android:layout_height="120px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/light_yellow"
+            android:fontFamily="@font/rancho"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:tag="2"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/removeIng4"
+            android:layout_width="150px"
+            android:layout_height="120px"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="25dp"
+            android:background="@android:color/transparent"
+            android:foreground="@drawable/fridge"
+            android:onClick="clear"
+            android:tag="3"
+            app:icon="@drawable/fridge"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <AutoCompleteTextView
+            android:id="@+id/ingredient2"
+            android:layout_width="650px"
+            android:layout_height="120px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/light_yellow"
+            android:fontFamily="@font/rancho"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:tag="3"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/removeIng3"
+            android:layout_width="150px"
+            android:layout_height="120px"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="25dp"
+            android:background="@android:color/transparent"
+            android:foreground="@drawable/fridge"
+            android:onClick="clear"
+            android:tag="2"
+            app:icon="@drawable/fridge"
+            app:layout_column="1"
+            app:layout_row="1" />
 
         <Button
             android:id="@+id/removeIng"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
+            android:layout_width="150px"
+            android:layout_height="120px"
             android:layout_marginRight="16dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="25dp"
             android:background="@android:color/transparent"
             android:foreground="@drawable/fridge"
+            android:onClick="clear"
+            android:tag="1"
             app:icon="@drawable/fridge"
             app:layout_column="1"
             app:layout_row="0" />
 
         <AutoCompleteTextView
             android:id="@+id/ingredient"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:layout_width="650px"
+            android:layout_height="120px"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp"
             android:background="@color/light_yellow"
+            android:fontFamily="@font/rancho"
             android:gravity="center|center_horizontal|center_vertical"
+            android:tag="1"
             android:textColor="#000000"
+            android:textSize="20sp"
             app:layout_column="0"
             app:layout_row="0" />
 
@@ -70,20 +166,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bg3"
-        app:layout_constraintVertical_bias="0.118" />
-
-    <Button
-        android:id="@+id/addIng"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="264dp"
-        android:background="@android:color/transparent"
-        android:foreground="@drawable/food"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/bg3" />
 
     <Button
         android:id="@+id/cook"
@@ -95,70 +178,71 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addIng"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/allIngredients" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.gridlayout.widget.GridLayout
-            android:id="@+id/navbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/brick_red"
+        <Button
+            android:id="@+id/webSearch"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/transparent"
+            android:foreground="@drawable/fingerprint"
+            android:insetLeft="10dp"
+            android:insetRight="10dp"
+            android:onClick="webSearch"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/dishes"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/transparent"
+            android:foreground="@drawable/dish"
+            android:insetLeft="10dp"
+            android:insetRight="10dp"
+            android:onClick="cook"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.656"
+            app:layout_constraintStart_toEndOf="@+id/webSearch"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/transparent"
+            android:foreground="@drawable/menu"
+            android:insetLeft="10dp"
+            android:insetRight="10dp"
+            android:onClick="menu"
             android:textAlignment="center"
-            app:alignmentMode="alignBounds"
-            app:columnCount="5"
-            app:flow_horizontalAlign="center"
-            app:flow_verticalAlign="center"
-            app:rowCount="1">
-
-            <Button
-                android:id="@+id/menu"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/transparent"
-                android:foreground="@drawable/menu"
-                android:insetLeft="10dp"
-                android:insetRight="10dp"
-                android:onClick="menu"
-                android:textAlignment="center"
-                app:layout_column="0"
-                app:layout_row="0" />
-
-            <Button
-                android:id="@+id/webSearch"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="50dp"
-                android:background="@android:color/transparent"
-                android:foreground="@drawable/fingerprint"
-                android:insetLeft="10dp"
-                android:insetRight="10dp"
-                android:onClick="webSearch"
-                app:layout_column="1"
-                app:layout_row="0" />
-
-            <Button
-                android:id="@+id/dishes"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="70dp"
-                android:background="@android:color/transparent"
-                android:foreground="@drawable/dish"
-                android:insetLeft="10dp"
-                android:insetRight="10dp"
-                android:onClick="cook2"
-                app:layout_column="3"
-                app:layout_row="0" />
-        </androidx.gridlayout.widget.GridLayout>
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/webSearch"
+            app:layout_constraintHorizontal_bias="0.33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

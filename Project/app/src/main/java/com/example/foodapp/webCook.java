@@ -15,10 +15,17 @@ public class webCook extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_cook);
         WebView view = (WebView) findViewById(R.id.web);
+        String dish = "";
         view.getSettings().setJavaScriptEnabled(true); //loads js
         view.setWebViewClient(new WebViewClient()); //client inside mobile app
-        view.loadUrl("https://www.google.com/");
-
+        Intent intent = getIntent();
+        if(intent.hasExtra("Dish"))
+         dish = intent.getStringExtra("Dish");
+        if (dish.equals("")) {
+            view.loadUrl("https://www.google.com/");
+        } else {
+            view.loadUrl("https://www.google.com/search?q=how+to+cook+" + dish);
+        }
     }
 
     public void cook2(View view) { //from nav

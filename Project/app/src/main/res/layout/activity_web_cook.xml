@@ -27,57 +27,53 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.gridlayout.widget.GridLayout
-            android:id="@+id/gridLayout"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/brick_red"
-            app:columnCount="3"
-            app:rowCount="1">
-
-            <Button
-                android:id="@+id/dishes6"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="80dp"
-                android:background="@android:color/transparent"
-                android:foreground="@drawable/dish"
-                android:insetLeft="10dp"
-                android:insetRight="10dp"
-                android:onClick="cook2"
-                app:layout_column="2"
-                app:layout_row="0" />
+            android:background="@color/brick_red">
 
             <Button
                 android:id="@+id/webSearch3"
                 android:layout_width="50dp"
                 android:layout_height="40dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="10dp"
                 android:background="@android:color/transparent"
                 android:foreground="@drawable/fingerprint"
                 android:insetLeft="10dp"
                 android:insetRight="10dp"
                 android:onClick="webSearch"
-                app:layout_column="1"
-                app:layout_row="0" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/dishes6"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:foreground="@drawable/dish"
+                android:insetLeft="10dp"
+                android:insetRight="10dp"
+                android:onClick="cook2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/webSearch3"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/menu3"
                 android:layout_width="50dp"
                 android:layout_height="40dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="10dp"
                 android:background="@android:color/transparent"
                 android:foreground="@drawable/menu"
                 android:insetLeft="10dp"
                 android:insetRight="10dp"
                 android:onClick="menu"
-                app:layout_column="0"
-                app:layout_row="0" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/webSearch3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.gridlayout.widget.GridLayout>
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>

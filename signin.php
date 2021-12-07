@@ -1,7 +1,12 @@
 <?php
 include("connection.php");
-$query = "SELECT COUNT(*) FROM recipe_ingredients";
+$values = explode(",", $_GET['login'] ?? "");
+$name = $values[0];
+$password = hash("sha256",$values[1]);
+
+$query = "SELECT * FROM users WHERE username =? AND password=?";
 $stmt = $connection->prepare($query);
+$stmt ->bind_param("ss",$name, $password);
 $stmt->execute();
 $result = $stmt->get_result();
 $temp_array=[];
